@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* GdkIosLegacy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* GdkIosLegacy.m */; };
-		F4FF95D7245B92E800C19C63 /*  GdkIosLegacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  GdkIosLegacy.swift */; };
+		F4FF95D7245B92E800C19C63 /* GdkIosLegacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* GdkIosLegacy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +25,7 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libGdkIosLegacy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGdkIosLegacy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5891CC2AC0600A0062D /* GdkIosLegacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GdkIosLegacy.m; sourceTree = "<group>"; };
+		F47205A728F850BB00E1795F /* GreenAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GreenAddress.swift; path = "../gdk-iphone/share/gdk/GreenAddress.swift"; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* GdkIosLegacy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GdkIosLegacy-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* GdkIosLegacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GdkIosLegacy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +52,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				F47205A728F850BB00E1795F /* GreenAddress.swift */,
 				F4FF95D6245B92E800C19C63 /* GdkIosLegacy.swift */,
 				B3E7B5891CC2AC0600A0062D /* GdkIosLegacy.m */,
 				F4FF95D5245B92E700C19C63 /* GdkIosLegacy-Bridging-Header.h */,
@@ -117,7 +118,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FF95D7245B92E800C19C63 /* GdkIosLegacy.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* GdkIosLegacy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,11 +227,16 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../gdk-iphone/lib/iphone/libgreenaddress_full.a",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(SRCROOT)/../gdk-iphone/lib/iphone/libgreenaddress_full.a",
+				);
 				PRODUCT_NAME = GdkIosLegacy;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../gdk-iphone/lib/iphone/libgreenaddress_full.a $(SRCROOT)/../gdk-iphone/include/gdk/libwally-core";
 				SWIFT_OBJC_BRIDGING_HEADER = "GdkIosLegacy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -246,11 +251,16 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../gdk-iphone/lib/iphone/libgreenaddress_full.a",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(SRCROOT)/../gdk-iphone/lib/iphone/libgreenaddress_full.a",
+				);
 				PRODUCT_NAME = GdkIosLegacy;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../gdk-iphone/lib/iphone/libgreenaddress_full.a $(SRCROOT)/../gdk-iphone/include/gdk/libwally-core";
 				SWIFT_OBJC_BRIDGING_HEADER = "GdkIosLegacy-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
